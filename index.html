@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Bulb Color Switch</title>
+
+
+</head>
+<body>
+  <div class="ball"></div>
+  <script>
+    const ball = document.querySelector('.ball');
+    document.addEventListener('mousemove', (e) => {
+      ball.style.left = `${e.pageX}px`;
+      ball.style.top = `${e.pageY}px`;
+    });
+  </script>
+</body>
+
+
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div id="loading">
+    <p class="loading-text">LOADING</p>
+    <img class="spin" src="loading.gif" alt="spin">
+  </div>
+
+  <header>
+    <h1>Light Bulb Color Switch</h1>
+  </header>
+  <main>
+    <div class="image-container">
+      <img id="toggle-image" src="images/raito_kuro.png" alt="off電球">
+    </div>
+    <a id="btn" href="#">ON</a>
+  </main>
+  <footer>
+    <p>© Icons by icons8.com</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+
+.ball {
+    width: 30px;
+    height: 30px;
+    background-color: #FCDC4A;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* マウスイベントを無効化 */
+    transition: transform 0.2s, top, 0.5s, left 0.5s, width .5s, height .5s, background-color .5s;
+  }
+  
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* メイン部分の高さを調整 */
+    
+  }
+
+  /* ボタンのスタイル */
+#btn {
+    display: flex;
+    justify-content: center; /* 横方向に中央揃え */
+    align-items: center; /* 縦方向に中央揃え */
+    margin: 30px auto 0; /* 画像との間に余白を作成 */
+    border: solid 3px #333; /* 枠線を追加 */
+    padding: 16px 40px; /* ボタンの内側の余白 */
+    text-decoration: none; /* 下線を削除 */
+    color: #333; /* 文字色 */
+    font-size: 16px; /* フォントサイズ */
+    text-align: center; /* テキスト中央揃え */
+    border-radius: 8px; /* 角を丸くする */
+    transition: background-color 0.2s, color 0.2s; /* ホバー時のアニメーション */
+    min-width: 50px; /* 最小幅を指定 */
+    max-width: 50px; 
+    height: 20px; /* 高さを固定 */
+   
+  }
+
+  #btn:hover {
+    background-color: #333; /* ホバー時の背景色 */
+    color: #fff; /* ホバー時の文字色 */
+  }
+
+  /* ボタンが押された時（黄色枠、文字OFF） */
+#btn.active {
+    border-color: #FCDC4A; /* 黄色い枠線 */
+    color: #FCDC4A; /* 文字色を黄色に */
+    background-color: #333; /* 背景色を変更（黒に） */
+}
+
+/* ボタンが押された時にカーソルをかざすと背景色が黄色、文字色が白、枠線も黄色に */
+#btn.active:hover {
+    background-color: #FCDC4A; /* 背景色を黄色に */
+    color: #333; /* 文字色を白に */
+    border-color: #FCDC4A; /* 枠線を黄色に */
+}
+  
+
+  /* ボタンを中央揃え */
+main {
+    text-align: center;
+  }
+
+  /* 背景色を黒にするクラス */
+body.black-background {
+    background-color: #333; /* 背景色を黒に */
+    color: #fff; /* 文字色を白に */
+}
+
+
+  #toggle-image {
+    width: 300px; /* 固定幅 */
+    height: 300px; /* 固定高さ */
+    object-fit: contain; /* アスペクト比を維持しながら内容を収める */
+  }
+
+  a {
+    display: inline-block; /* インライン要素をブロック要素のようにする */
+    border: solid 3px #333; /* 枠線を追加 */
+    padding: 16px 72px; /* 内側の余白を設定 */
+    text-decoration: none; /* 下線を消す */
+    color: #333; /* テキストの色 */
+    font-size: 16px; /* フォントサイズ */
+    text-align: center; /* テキストを中央揃え */
+    border-radius: 8px; /* ボタンの角を丸くする */
+    transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーション */
+  }
+  
+  a:hover {
+    background-color: #333; /* 背景色を変更 */
+    color: #fff; /* テキスト色を変更 */
+  }
+
+
+  #loading {
+    transition: all 1.5s; /*ローディングにかかる時間*/
+    background-color: #FFF;
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .loading-text {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .spin {
+    width: 64px;
+    height: auto;
+  }
+  
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+ 
